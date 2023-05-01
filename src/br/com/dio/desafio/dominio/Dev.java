@@ -31,10 +31,10 @@ public class Dev {
         }
         return soma;
 
-        /*return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();*/
+//        return this.conteudosConcluidos
+//                .stream()
+//                .mapToDouble(Conteudo::calcularXp)
+//                .sum();
     }
 
 
@@ -73,5 +73,12 @@ public class Dev {
     @Override
     public int hashCode() {
         return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+    }
+
+    @Override
+    public String toString() {
+        return  "\nnome='" + getNome() + '\''+
+                "\nconteudosInscritos= " + getConteudosInscritos() +
+                " conteudosConcluidos= " + getConteudosConcluidos();
     }
 }
